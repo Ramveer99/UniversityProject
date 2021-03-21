@@ -15,7 +15,7 @@ public class Universitysystem //extends JFrame
         for(i=2;i<650;i+=4,x+=1)
         {
             f1.setLocation((550-((i+x)/2)),350-(i/2));
-            f1.setSize(i+2*x,i+x/10);
+            f1.setSize(i+3*x,i+x/2);
             
             try
             {
@@ -40,7 +40,7 @@ class Frame extends JFrame implements Runnable
         add(l1);
         t1= new Thread(this);
         t1.start();
-        setUndecorated(true);
+        
         
     }
     @Override
@@ -51,11 +51,12 @@ class Frame extends JFrame implements Runnable
             Thread.sleep(7000);
             this.setVisible(false);
           new Login().setVisible(true);
-        }
-        catch(Exception e){e.printStackTrace();}
+        }catch(Exception e){e.printStackTrace();}
     }
- 
+    /*public static void main(String[] args) 
+    {
+        new Universitysystem().f1.setVisible(true);
+    }*/
 }
-
 
 
